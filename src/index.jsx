@@ -1,5 +1,6 @@
 import 'raf/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
+import BindExamples from './Examples/BindExamples';
 
-render(<div>Hello</div>, document.getElementById('root'));
+render(<BindExamples />, document.getElementById('root'));
