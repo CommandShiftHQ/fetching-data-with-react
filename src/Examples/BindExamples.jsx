@@ -13,7 +13,6 @@ class BindExamples extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount is run');
     fetch(DATA_URL)
       .then(response => response.json())
       .then(data => this.setState({ data }))
@@ -22,24 +21,6 @@ class BindExamples extends React.Component {
           error: true,
         });
       });
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate is run');
-  }
-
-
-  static getDerivedStateFromProps() {
-    console.log('getDerivedStateFromProps is run');
-  }
-
-  shouldComponentUpdate() {
-    console.log('shouldComponentUpdate is run');
-    return true;
-  }
-
-  getSnapshotBeforeUpdate() {
-    console.log('getSnapshotBeforeUpdate - last chance to see dom as it is...');
   }
 
   render() {
